@@ -1,0 +1,23 @@
+<div class="navbar-inner ng-scope" ng-controller="HeaderController">
+  <ul class="nav">
+    <li><a class="brand" href="#/">ngFantasyFootball</a></li>
+    <li ng-repeat="entry in navbarEntries" ng-show="auth" ng-class="{ active: entry.isActive }">
+      <a href="#{{entry.link}}">{{entry.title}}</a>
+    </li>
+  </ul>
+  <ul class="nav pull-right" ng-hide="auth">
+    <li><a href="#/signup">Signup</a></li>
+    <li class="divider-vertical"></li>
+    <li><a href="#/signin">Signin</a></li>
+  </ul>
+  <ul class="nav pull-right ng-hide" ng-show="auth">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        {{ user.name }}<b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="" ng-click="logout()">Signout</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

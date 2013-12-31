@@ -1,0 +1,5 @@
+<div ng-controller="PlayersController" ng-init="findOnePlayer()">
+  <h2><span ng-show="player.num">#{{ player.num }}</span> {{ player.name }}</h2>
+  <p><strong>Team: </strong>{{ nflteams[player.team].team }} {{ nflteams[player.team].mascot }}</p>
+  <p><strong>Position: </strong>{{ positions[player.pos].pos }}</p>
+</div>

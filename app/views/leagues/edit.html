@@ -1,0 +1,20 @@
+<div ng-controller="LeaguesController" ng-init="findOneLeague()">
+  <form class="horizontal">
+    <div class="control-group">
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input type="text" ng-model="league.name" id="name" placeholder="Name" />
+      </div>
+    </div>
+    <div class="control-group">
+      <div>
+        <button ng-click="createLeague()" ng-show="!leagueId">Create League</button>
+      </div>
+    </div>
+    <div class="control-group">
+      <div>
+        <a href="#/leagues">View all leagues</a>
+      </div>
+    </div>
+  </form>
+</div>
